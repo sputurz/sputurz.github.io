@@ -1,0 +1,1 @@
+export { InfiniteTrigger } from './InfiniteTrigger';
