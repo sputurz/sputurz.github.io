@@ -1,1 +1,0 @@
-export { MovieTagList } from './MovieTagList';

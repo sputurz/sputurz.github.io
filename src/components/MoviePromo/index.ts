@@ -1,1 +1,0 @@
-export { MoviePromo } from './MoviePromo';
