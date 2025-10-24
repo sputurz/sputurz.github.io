@@ -1,0 +1,25 @@
+@use '../../../styles/variables' as *;
+
+.nav {
+  padding: 1rem 2rem 0 0;
+  font-family: $ff-montserrat-bold;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 1.1rem;
+    color: $color-white;
+  }
+
+  &__link-current {
+    color: $color-red-link;
+  }
+}
