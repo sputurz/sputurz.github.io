@@ -4,7 +4,7 @@ import { Hero } from './components/sections/hero';
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Hero></Hero>
     </>
   );
