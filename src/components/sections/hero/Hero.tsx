@@ -3,36 +3,30 @@ import { useEffect, useRef } from 'react';
 import './SimpleParallaxHero.css';
 
 export function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const bgRef = useRef<HTMLDivElement>(null);
+  const parallaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (!heroRef.current || !bgRef.current) return;
-
-      const rect = heroRef.current.getBoundingClientRect();
-
-      // Коэффициент скорости параллакса
-      const speed = 0.07; // медленно, почти в 14 раз медленнее блока
-
-      // Смещение фона относительно текущего положения Hero
-      const offset = -rect.top * speed;
-
-      bgRef.current.style.transform = `translateY(${offset}px)`;
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        const offset = window.pageYOffset;
+        parallaxRef.current.style.backgroundPositionY = `${offset * 0.8}px`;
+      }
     };
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // стартовое положение
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <>
-      <section ref={heroRef} className="hero">
-        <div ref={bgRef} className="hero-bg" />
-        <h1>Добро пожаловать!</h1>
-      </section>
-      <div style={{ height: '200vh', background: '#f0f0f0' }} />
+      <div className="parallax-container">
+        <div ref={parallaxRef} className="parallax"></div>
+        <div className="overlay1"></div>
+      </div>
+      <div className="content">
+        <h1>Параллакс Эффект на React + TypeScript</h1>
+        <p>Прокрутите вниз, чтобы увидеть эффект.</p>
+      </div>
     </>
   );
 }
