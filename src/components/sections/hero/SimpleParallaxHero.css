@@ -1,31 +1,3 @@
-/* Parallax.css */
-.parallax-container {
-  z-index: 1;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.parallax {
-  background-image: url('/public/images/hero-bg.jpg');
-  position: absolute;
-  top: -10%;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(0.5);
-}
-
-.overlay1 {
-  position: absolute;
-  inset: 0;
-  opacity: 0.1;
-  z-index: 10;
-}
-
 .content {
   height: 200vh;
   background-color: #f0f0f0;

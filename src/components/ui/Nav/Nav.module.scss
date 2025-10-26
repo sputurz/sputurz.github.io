@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .nav {
-  padding: 1rem 2rem 0 0;
+  padding: 2rem 2rem 0 0;
   font-family: $ff-montserrat-bold;
 
   &__list {
@@ -9,7 +9,7 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   &__link {
