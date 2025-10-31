@@ -7,6 +7,10 @@
   position: relative;
   overflow: hidden;
 
+  @include vp-500 {
+    min-height: 654px;
+  }
+
   &__bg {
     z-index: 1;
     background-image: url('/public/images/hero-bg.jpg');
@@ -34,11 +38,12 @@
     z-index: 13;
     position: absolute;
     bottom: 21.4rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     width: 100%;
     max-width: 1200px;
     justify-content: space-between;
-    justify-self: center;
 
     @include vp-1500 {
       max-width: 1000px;
@@ -57,6 +62,23 @@
 
     @include vp-800 {
       max-width: 500px;
+    }
+
+    @include vp-600 {
+      max-width: 380px;
+      bottom: 15rem;
+    }
+
+    @include vp-500 {
+      max-width: none;
+      width: 85%;
+    }
+
+    @include vp-400 {
+      width: calc(100% - 5rem);
+      gap: 3rem;
+      bottom: calc(50% - 1.7rem);
+      transform: translate(-50%, 50%);
     }
   }
 
@@ -85,6 +107,26 @@
       font-size: 4.8rem;
     }
 
+    @include vp-800 {
+      width: 460px;
+      font-size: 4.4rem;
+    }
+
+    @include vp-600 {
+      width: unset;
+      font-size: 4.2rem;
+    }
+
+    @include vp-500 {
+      font-size: 3.8rem;
+    }
+
+    @include vp-400 {
+      font-size: 3.5rem;
+      line-height: 1.25;
+      letter-spacing: -0.2rem;
+    }
+
     &-br {
       display: flex;
 
@@ -105,14 +147,32 @@
     line-height: 1.25;
     letter-spacing: 0.5rem;
 
+    @include vp-800 {
+      left: 3.9rem;
+      font-size: 1.6rem;
+    }
+
+    @include vp-500 {
+      font-size: 1.5rem;
+    }
+
+    @include vp-400 {
+      letter-spacing: 0.4rem;
+    }
+
     &::before {
       position: absolute;
       left: -7.9rem;
       top: 50%;
       content: '';
-      width: 60px;
+      width: 6rem;
       height: 2px;
       background-color: $color-red-accent;
+
+      @include vp-800 {
+        width: 4rem;
+        left: -4.8rem;
+      }
     }
   }
 
@@ -129,6 +189,15 @@
     @include vp-1000 {
       flex-direction: row;
       justify-content: flex-start;
+    }
+
+    @include vp-600 {
+      flex-direction: column;
+    }
+
+    @include vp-400 {
+      padding: 0;
+      gap: 1rem;
     }
   }
 
@@ -151,6 +220,11 @@
 
     outline: none;
 
+    @include vp-400 {
+      width: auto;
+      letter-spacing: 0.2rem;
+    }
+
     &:hover,
     &:focus-visible {
       background-color: $color-white;
@@ -169,6 +243,19 @@
     letter-spacing: 0.3rem;
     line-height: 3rem;
 
+    @include vp-1000 {
+      bottom: -13rem;
+    }
+
+    @include vp-600 {
+      bottom: -9rem;
+    }
+
+    @include vp-400 {
+      bottom: -8.6rem;
+      letter-spacing: 0.25rem;
+    }
+
     &::after {
       border-bottom: 0.2rem solid $color-red-scrool;
       border-right: 0.2rem solid $color-red-scrool;
@@ -182,10 +269,6 @@
       right: -2rem;
       top: 50%;
       transform: rotate(45deg);
-    }
-
-    @include vp-1000 {
-      bottom: -13rem;
     }
   }
 }

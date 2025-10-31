@@ -23,3 +23,21 @@
     @content;
   }
 }
+
+@mixin vp-600 {
+  @media (max-width: $vp-600) {
+    @content;
+  }
+}
+
+@mixin vp-500 {
+  @media (max-width: $vp-500) {
+    @content;
+  }
+}
+
+@mixin vp-400 {
+  @media (max-width: $vp-400) {
+    @content;
+  }
+}
