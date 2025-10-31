@@ -1,0 +1,26 @@
+@use '../../../styles/variables' as *;
+
+.socials {
+  position: absolute;
+  bottom: 0;
+  right: -4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: $ff-montserrat-bold;
+
+  &--hero {
+  }
+
+  &--footer {
+  }
+
+  &__link {
+    width: auto;
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}

@@ -1,6 +1,7 @@
 import styles from './Hero.module.scss';
 import { useEffect, useRef } from 'react';
 import './SimpleParallaxHero.css';
+import { Socials } from '../../ui/Socials';
 
 export function Hero() {
   const bgRef = useRef<HTMLDivElement>(null);
@@ -42,6 +43,7 @@ export function Hero() {
           <a className={styles['hero__scrool-link']} href="#">
             Scroll Down
           </a>
+          <Socials></Socials>
         </div>
       </section>
     </>
