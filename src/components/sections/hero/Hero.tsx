@@ -24,9 +24,11 @@ export function Hero() {
         <div className={styles.hero__overlay}></div>
         <div className={styles.hero__wrap}>
           <h1 className={styles.hero__title}>
-            I am Raman Mikulich.
-            <br></br> I am a Frontend
-            <br></br>developer based in Minsk.
+            I am Raman Mikulich.{' '}
+            <span className={styles['hero__title-br']}>
+              I am a frontend developer{' '}
+            </span>
+            based in Minsk.
           </h1>
           <div className={styles['hero__link-wrap']}>
             <a className={styles.hero__link} href="#">

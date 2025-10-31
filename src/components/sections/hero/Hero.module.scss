@@ -2,6 +2,7 @@
 @use '../../../styles/mixins' as *;
 
 .hero {
+  min-height: 786px;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -53,9 +54,14 @@
       gap: 3.4rem;
       bottom: 19.2rem;
     }
+
+    @include vp-800 {
+      max-width: 500px;
+    }
   }
 
   &__title {
+    display: block;
     width: 900px;
     margin: 0;
     color: $color-white;
@@ -77,6 +83,14 @@
     @include vp-1000 {
       width: 640px;
       font-size: 4.8rem;
+    }
+
+    &-br {
+      display: flex;
+
+      @include vp-1200 {
+        display: inline;
+      }
     }
   }
 

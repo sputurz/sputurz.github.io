@@ -17,3 +17,9 @@
     @content;
   }
 }
+
+@mixin vp-800 {
+  @media (max-width: $vp-800) {
+    @content;
+  }
+}
