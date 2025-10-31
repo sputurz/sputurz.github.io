@@ -42,11 +42,6 @@ export function Hero() {
           </a>
         </div>
       </section>
-
-      <div className="content">
-        <h1>Параллакс Эффект на React + TypeScript</h1>
-        <p>Прокрутите вниз, чтобы увидеть эффект.</p>
-      </div>
     </>
   );
 }

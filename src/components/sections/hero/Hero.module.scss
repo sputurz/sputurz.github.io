@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .hero {
   height: 100vh;
@@ -31,20 +32,52 @@
   &__wrap {
     z-index: 13;
     position: absolute;
-    bottom: 21rem;
+    bottom: 21.4rem;
     display: flex;
-    gap: 19rem;
+    width: 100%;
     max-width: 1200px;
+    justify-content: space-between;
     justify-self: center;
+
+    @include vp-1500 {
+      max-width: 1000px;
+    }
+
+    @include vp-1200 {
+      max-width: 800px;
+    }
+
+    @include vp-1000 {
+      max-width: 680px;
+      flex-direction: column;
+      gap: 3.4rem;
+      bottom: 19.2rem;
+    }
   }
 
   &__title {
+    width: 900px;
     margin: 0;
     color: $color-white;
     font-family: $ff-librebaskerville-bold;
     font-size: 6rem;
     line-height: 1.35;
     letter-spacing: -0.1rem;
+
+    @include vp-1500 {
+      width: 700px;
+      font-size: 5.2rem;
+    }
+
+    @include vp-1200 {
+      width: 500px;
+      font-size: 5rem;
+    }
+
+    @include vp-1000 {
+      width: 640px;
+      font-size: 4.8rem;
+    }
   }
 
   &__greeting {
@@ -74,6 +107,15 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 1.5rem;
+
+    @include vp-1200 {
+      padding-right: 30px;
+    }
+
+    @include vp-1000 {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
 
   &__link {
@@ -105,7 +147,7 @@
   &__scrool-link {
     position: absolute;
     left: 0.6rem;
-    bottom: -15rem;
+    bottom: -15.4rem;
     color: $color-white;
     font-family: $ff-montserrat-semibold;
     font-size: 1.1rem;
@@ -126,6 +168,10 @@
       right: -2rem;
       top: 50%;
       transform: rotate(45deg);
+    }
+
+    @include vp-1000 {
+      bottom: -13rem;
     }
   }
 }
