@@ -10,27 +10,27 @@ export const siteConfig = {
     {
       name: 'telegram',
       url: 'https://t.me/raman_mikulich',
-      iconUrl: '/icons/tg.svg',
+      iconName: 'TgIcon',
     },
     {
       name: 'github',
       url: 'https://github.com/sputurz',
-      iconUrl: '/icons/gh.svg',
+      iconName: 'GhIcon',
     },
     {
       name: 'instagram',
       url: 'https://www.instagram.com/sputurz_13',
-      iconUrl: '/icons/inst.svg',
+      iconName: 'InstIcon',
     },
     {
       name: 'facebook',
       url: 'https://www.facebook.com/sputurza',
-      iconUrl: '/icons/fb.svg',
+      iconName: 'FbIcon',
     },
     {
       name: 'researchgate',
       url: 'https://www.researchgate.net/profile/R-Mikulich/research',
-      iconUrl: '/icons/rg.svg',
+      iconName: 'RgIcon',
     },
   ],
 } as const;

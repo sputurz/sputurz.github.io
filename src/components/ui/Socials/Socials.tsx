@@ -1,5 +1,6 @@
 import styles from './Socials.module.scss';
 import { siteConfig } from '../../../config/site.config';
+import { Icon } from '../Icon';
 
 export function Socials() {
   return (
@@ -13,10 +14,7 @@ export function Socials() {
               href={socialsLink.url}
               title={socialsLink.name}
             >
-              <img
-                className={styles.socials__icon}
-                src={socialsLink.iconUrl}
-              ></img>
+              <Icon name={socialsLink.iconName}></Icon>
             </a>
           </li>
         ))}

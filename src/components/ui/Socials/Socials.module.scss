@@ -17,10 +17,11 @@
 
   &__link {
     width: auto;
-  }
+    color: $color-white;
 
-  &__icon {
-    width: 4rem;
-    height: 4rem;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
