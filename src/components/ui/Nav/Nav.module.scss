@@ -1,8 +1,13 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .nav {
   padding: 2rem 2rem 0 0;
   font-family: $ff-montserrat-bold;
+
+  @include vp-800 {
+    display: none;
+  }
 
   &__list {
     list-style: none;
@@ -13,13 +18,21 @@
   }
 
   &__link {
+    display: flex;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     font-size: 1.1rem;
     color: $color-white;
-  }
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
-  &__link-current {
-    color: $color-red-link;
+    &:hover,
+    &:focus-visible {
+      opacity: 0.7;
+      transform: scale(1.01);
+    }
+
+    &--current {
+      color: $color-red-link;
+    }
   }
 }

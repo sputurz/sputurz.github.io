@@ -1,22 +1,48 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .socials {
   display: flex;
   flex-direction: column;
-  // gap: 22px;
   position: absolute;
-  bottom: -1.2rem;
-  right: -12rem;
+  bottom: 18rem;
+  right: 3rem;
   list-style: none;
   padding: 0;
   margin: 0;
   font-family: $ff-montserrat-bold;
   $root: &;
+  z-index: 1;
+
+  @include vp-600 {
+    bottom: 10.8rem;
+
+    &::after {
+      height: 10.1rem;
+      right: -10.8rem;
+    }
+  }
+
+  @include vp-400 {
+    display: none;
+  }
 
   &--hero {
   }
 
   &--footer {
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    height: 17.4rem;
+    width: 1px;
+    background-color: $color-white-08;
+    position: absolute;
+    bottom: -18rem;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   &__link {
@@ -54,7 +80,7 @@
     position: absolute;
     top: 0;
     right: 4.7rem;
-    color: $color-sosials-tooltip;
+    color: $color-socials-tooltip;
     text-transform: capitalize;
     font-size: 1.3rem;
     line-height: 3.6rem;

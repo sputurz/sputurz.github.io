@@ -1,3 +1,14 @@
 .logo {
   height: 27px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+
+  &__img {
+    height: 100%;
+  }
 }

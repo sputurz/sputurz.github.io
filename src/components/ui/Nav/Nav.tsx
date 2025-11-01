@@ -11,7 +11,7 @@ export function Nav() {
               <a
                 className={styles.nav__link}
                 href={navLink.url}
-                title={navLink.name}
+                aria-label={navLink.name}
               >
                 {navLink.name}
               </a>

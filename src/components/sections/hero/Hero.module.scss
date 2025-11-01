@@ -12,15 +12,13 @@
   }
 
   &__bg {
-    z-index: 1;
     background-image: url('/images/hero-bg.jpg');
     position: absolute;
-    // top: -20%;
-    top: -10%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
-    background-position: center;
+    height: 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -30,12 +28,11 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    z-index: 9;
+    z-index: 0;
     background: linear-gradient($color-black-40, $color-black-80);
   }
 
   &__wrap {
-    z-index: 13;
     position: absolute;
     bottom: 21.4rem;
     left: 50%;
@@ -242,6 +239,8 @@
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     line-height: 3rem;
+    padding-right: 3rem;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 
     @include vp-1000 {
       bottom: -13rem;
@@ -256,6 +255,12 @@
       letter-spacing: 0.25rem;
     }
 
+    &:hover,
+    &:focus-visible {
+      opacity: 0.7;
+      transform: scale(1.01);
+    }
+
     &::after {
       border-bottom: 0.2rem solid $color-red-scrool;
       border-right: 0.2rem solid $color-red-scrool;
@@ -266,7 +271,7 @@
       margin-top: -7px;
       pointer-events: none;
       position: absolute;
-      right: -2rem;
+      right: 0.8rem;
       top: 50%;
       transform: rotate(45deg);
     }

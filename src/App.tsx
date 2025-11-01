@@ -4,7 +4,7 @@ import { Hero } from './components/sections/hero';
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Hero></Hero>
       <div className="content">
         <h1>Параллакс Эффект на React + TypeScript</h1>

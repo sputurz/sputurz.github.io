@@ -32,19 +32,31 @@ export function Hero() {
             based in Minsk.
           </h1>
           <div className={styles['hero__link-wrap']}>
-            <a className={styles.hero__link} href="#">
+            <a
+              className={styles.hero__link}
+              href="#"
+              aria-label="Latest Projects"
+            >
               Latest Projects
             </a>
-            <a className={styles.hero__link} href="#">
+            <a
+              className={styles.hero__link}
+              href="#"
+              aria-label="More About Me"
+            >
               More About Me
             </a>
           </div>
           <span className={styles.hero__greeting}>Hello There</span>
-          <a className={styles['hero__scrool-link']} href="#">
+          <a
+            className={styles['hero__scrool-link']}
+            href="#"
+            aria-label="Scroll Down"
+          >
             Scroll Down
           </a>
-          <Socials></Socials>
         </div>
+        <Socials></Socials>
       </section>
     </>
   );
