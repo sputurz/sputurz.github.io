@@ -34,7 +34,8 @@ export function Hero() {
           <div className={styles['hero__link-wrap']}>
             <a
               className={styles.hero__link}
-              href="#"
+              href="https://sputurz.github.io/sputurz-movie-finder.github.io/"
+              target="_blank"
               aria-label="Latest Projects"
             >
               Latest Projects
