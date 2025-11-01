@@ -10,7 +10,7 @@ export const siteConfig = {
     {
       name: 'telegram',
       url: 'https://t.me/raman_mikulich',
-      iconName: 'FbIcon',
+      iconName: 'TgIcon',
     },
     {
       name: 'github',
