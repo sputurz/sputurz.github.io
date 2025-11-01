@@ -1,6 +1,11 @@
 import * as Icons from './icons';
 
-export function Icon({ name }: { name: keyof typeof Icons }) {
+interface IProps {
+  name: keyof typeof Icons;
+  className?: string;
+}
+
+export function Icon({ name, className }: IProps) {
   const LazyIcon = Icons[name];
-  return <LazyIcon />;
+  return <LazyIcon className={className} viewBox="0 0 24 24" />;
 }

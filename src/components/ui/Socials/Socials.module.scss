@@ -1,13 +1,17 @@
 @use '../../../styles/variables' as *;
 
 .socials {
+  display: flex;
+  flex-direction: column;
+  // gap: 22px;
   position: absolute;
-  bottom: 0;
-  right: -4rem;
+  bottom: -1.2rem;
+  right: -12rem;
   list-style: none;
   padding: 0;
   margin: 0;
   font-family: $ff-montserrat-bold;
+  $root: &;
 
   &--hero {
   }
@@ -16,12 +20,47 @@
   }
 
   &__link {
-    width: auto;
-    color: $color-white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
 
-    svg {
-      width: 24px;
-      height: 24px;
+    &:hover #{$root}__icon,
+    &:focus-visible #{$root}__icon {
+      transform: scale(1.4);
     }
+
+    &:hover #{$root}__tooltip,
+    &:focus-visible #{$root}__tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  &__icon {
+    color: $color-white;
+    width: 1.4rem;
+    height: 1.4rem;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__tooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 4.7rem;
+    color: $color-sosials-tooltip;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    line-height: 3.6rem;
+    transform: scale(0);
+    transform-origin: 100% 50%;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
+      visibility 0.5s ease-in-out;
   }
 }

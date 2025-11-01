@@ -14,7 +14,13 @@ export function Socials() {
               href={socialsLink.url}
               title={socialsLink.name}
             >
-              <Icon name={socialsLink.iconName}></Icon>
+              <Icon
+                name={socialsLink.iconName}
+                className={styles.socials__icon}
+              ></Icon>
+              <span className={styles.socials__tooltip}>
+                {socialsLink.name}
+              </span>
             </a>
           </li>
         ))}
