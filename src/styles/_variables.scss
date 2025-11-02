@@ -1,37 +1,25 @@
 // Colors
-$color-body-bg: #0a0809;
-$color-main-text: #ffffff;
-$color-second-text: #5f5f5f;
+$color-primary-text: #ffffff;
+$color-secondary-text: #5f5f5f;
+$color-primary-btn: #ffffff;
+$color-secondary-btn: #000000;
 $color-link-text: #862121;
-
-$color-white: #ffffff;
-
-$color-red-accent: hsl(0, 60%, 33%);
-$color-red-link: #af2b2b;
-$color-red-scrool: #922424;
 $color-socials-tooltip-hero: #af2b2b;
-$color-black: #000000;
+$color-socials-bar: rgb(255, 255, 255, 0.08);
+$color-hero-scrool: #922424;
+$color-hero-greeting: #862121;
+$color-nav-active: #af2b2b;
 
-$color-black: #000000;
+//Background color
+$bg-color-primary-body: #0a0809;
+$bg-color-primary-btn: #ffffff;
 
-$color-white-08: rgb(255, 255, 255, 0.08);
-$color-black-40: rgb(0, 0, 0, 0.4);
-$color-black-80: rgb(0, 0, 0, 0.8);
+//Background image and URL's
+$bg-hero-url: url('/images/hero-bg.jpg');
+$bg-overlay-gradient: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8));
 
-$color-night-rider: #2f2f2f;
-$color-portage: #7888e2;
-$color-free-speech-blue: #475cd6;
-$color-free-speech-blue-2: #364edf;
-$color-royal-blue: #5c72ee;
-$color-solitude: #e8eeff;
-$color-light-pink: #f5b8c0;
-$color-lavender-blush: #fff0f1;
-$color-white-smoke: #f8f8f8;
-$color-solitude: #e8eeff;
-$color-suva-grey: #8b8b8b;
-$color-shuttle-grey: #8b8b8b;
-$color-alice-blue: #f8faff;
-$color-red-orange: #ff2f2f;
+// Border color
+$brdr-color-primary-btn: #ffffff;
 
 // Typography
 // libre baskerville
@@ -60,4 +48,4 @@ $vp-500: 500px;
 $vp-400: 400px;
 
 // Animation
-$transition-500: ease-in-out 0.5s;
+$transition-500: 0.5s ease-in-out;

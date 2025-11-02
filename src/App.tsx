@@ -7,10 +7,6 @@ function App() {
     <>
       <Header />
       <Hero />
-      <div className="content">
-        <h1>Параллакс Эффект на React + TypeScript</h1>
-        <p>Прокрутите вниз, чтобы увидеть эффект.</p>
-      </div>
       <Footer />
     </>
   );

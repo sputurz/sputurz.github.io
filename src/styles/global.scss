@@ -24,8 +24,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  // min-width: 400px;
-  background-color: $color-body-bg;
+
+  background-color: $bg-color-primary-body;
 }
 
 main {

@@ -37,7 +37,7 @@
       content: '';
       height: 17.4rem;
       width: 1px;
-      background-color: $color-white-08;
+      background-color: $color-socials-bar;
       position: absolute;
       bottom: -18rem;
       right: 50%;
@@ -78,6 +78,11 @@
       gap: 2.7rem;
     }
 
+    #{$root}__link:hover #{$root}__tooltip,
+    #{$root}__link:focus-visible #{$root}__tooltip {
+      opacity: 0.7;
+    }
+
     #{$root}__icon {
       width: 1.8rem;
       height: 1.8rem;
@@ -91,9 +96,15 @@
     #{$root}__tooltip {
       text-transform: uppercase;
       letter-spacing: 0.3rem;
+      transition: opacity 0.5s ease-in-out;
 
       @include vp-600 {
         display: none;
+      }
+
+      &:hover,
+      &:focus-visible {
+        opacity: 0.7;
       }
     }
   }
@@ -112,7 +123,7 @@
   }
 
   &__icon {
-    color: $color-white;
+    color: $color-primary-text;
     width: 1.4rem;
     height: 1.4rem;
     transition: transform 0.5s ease-in-out;
@@ -122,6 +133,6 @@
     text-transform: capitalize;
     font-size: 1.3rem;
     line-height: 3.6rem;
-    color: $color-main-text;
+    color: $color-primary-text;
   }
 }

@@ -13,7 +13,7 @@ export function Footer() {
           <a
             className={styles['footer__credits-link']}
             target="_blank"
-            aria-label="Link to "
+            aria-label="Link to Sputurz GitHub Page"
             href="https://github.com/sputurz"
           >
             Sputurz

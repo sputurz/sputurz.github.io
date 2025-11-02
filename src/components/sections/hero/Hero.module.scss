@@ -12,7 +12,7 @@
   }
 
   &__bg {
-    background-image: url('/images/hero-bg.jpg');
+    // background-image: $url-hero-bg;
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +29,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: linear-gradient($color-black-40, $color-black-80);
+    background-image: $bg-overlay-gradient;
   }
 
   &__wrap {
@@ -83,7 +83,7 @@
     display: block;
     width: 900px;
     margin: 0;
-    color: $color-white;
+    color: $color-primary-text;
     font-family: $ff-librebaskerville-bold;
     font-size: 6rem;
     line-height: 1.35;
@@ -138,7 +138,7 @@
     left: 4.9rem;
     top: -2.6rem;
     font-family: $ff-montserrat-bold;
-    color: $color-red-accent;
+    color: $color-hero-greeting;
     font-size: 1.8rem;
     text-transform: uppercase;
     line-height: 1.25;
@@ -164,7 +164,7 @@
       content: '';
       width: 6rem;
       height: 2px;
-      background-color: $color-red-accent;
+      background-color: $color-hero-greeting;
 
       @include vp-800 {
         width: 4rem;
@@ -206,13 +206,13 @@
     font-size: 1.2rem;
     font-family: $ff-montserrat-semibold;
     line-height: 4.8rem;
-    color: $color-white;
+    color: $color-primary-btn;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
     cursor: pointer;
     // padding: 0.3rem;
 
-    border: 0.3rem solid $color-white;
+    border: 0.3rem solid $brdr-color-primary-btn;
     transition: all 0.5s ease-in-out;
 
     outline: none;
@@ -224,8 +224,8 @@
 
     &:hover,
     &:focus-visible {
-      background-color: $color-white;
-      color: $color-black;
+      background-color: $bg-color-primary-btn;
+      color: $color-secondary-btn;
     }
   }
 
@@ -233,7 +233,7 @@
     position: absolute;
     left: 0.6rem;
     bottom: -15.4rem;
-    color: $color-white;
+    color: $color-primary-text;
     font-family: $ff-montserrat-semibold;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -262,8 +262,8 @@
     }
 
     &::after {
-      border-bottom: 0.2rem solid $color-red-scrool;
-      border-right: 0.2rem solid $color-red-scrool;
+      border-bottom: 0.2rem solid $color-hero-scrool;
+      border-right: 0.2rem solid $color-hero-scrool;
       content: '';
       display: block;
       height: 8px;
