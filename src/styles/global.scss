@@ -1,6 +1,7 @@
 @use './normalize' as *;
 @use './fonts' as *;
 @use './container' as *;
+@use './variables' as *;
 
 *,
 *::after,
@@ -24,7 +25,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   // min-width: 400px;
-  background-color: #605f5f;
+  background-color: $color-body-bg;
 }
 
 main {

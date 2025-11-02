@@ -1,0 +1,36 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.footer {
+  padding: 6.6rem 0 4.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__logo {
+    height: 44px;
+
+    @include vp-400 {
+      height: 34px;
+    }
+  }
+
+  &__credits {
+    padding: 7.2rem 0 0;
+    font-size: 1.4rem;
+    color: $color-second-text;
+    font-family: $ff-montserrat-regular;
+
+    &-link {
+      color: $color-link-text;
+      transition: opacity 0.5s ease-in-out;
+
+      &:focus-visible,
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -57,7 +57,7 @@ export function Hero() {
             Scroll Down
           </a>
         </div>
-        <Socials></Socials>
+        <Socials modifier="hero" />
       </section>
     </>
   );

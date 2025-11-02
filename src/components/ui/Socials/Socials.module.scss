@@ -3,10 +3,9 @@
 
 .socials {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 18rem;
-  right: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 3.8rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -14,55 +13,101 @@
   $root: &;
   z-index: 1;
 
-  @include vp-600 {
-    bottom: 10.8rem;
+  &--hero {
+    flex-direction: column;
+    position: absolute;
+    bottom: 18rem;
+    right: 3rem;
+
+    @include vp-600 {
+      bottom: 10.8rem;
+
+      &::after {
+        height: 10.1rem;
+        right: -10.8rem;
+      }
+    }
+
+    @include vp-400 {
+      display: none;
+    }
 
     &::after {
-      height: 10.1rem;
-      right: -10.8rem;
+      display: block;
+      content: '';
+      height: 17.4rem;
+      width: 1px;
+      background-color: $color-white-08;
+      position: absolute;
+      bottom: -18rem;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    #{$root}__link {
+      width: 36px;
+      height: 36px;
+
+      &:hover #{$root}__tooltip,
+      &:focus-visible #{$root}__tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+
+    #{$root}__tooltip {
+      color: $color-socials-tooltip-hero;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 4.7rem;
+      transform: scale(0);
+      transform-origin: 100% 50%;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
+        visibility 0.5s ease-in-out;
     }
   }
 
-  @include vp-400 {
-    display: none;
-  }
-
-  &--hero {
-  }
-
   &--footer {
-  }
+    padding: 3.9rem 0 3rem;
 
-  &::after {
-    display: block;
-    content: '';
-    height: 17.4rem;
-    width: 1px;
-    background-color: $color-white-08;
-    position: absolute;
-    bottom: -18rem;
-    right: 50%;
-    transform: translateX(50%);
+    @include vp-600 {
+      padding: 4.6rem 0 3rem;
+      gap: 2.7rem;
+    }
+
+    #{$root}__icon {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      @include vp-600 {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+
+    #{$root}__tooltip {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+
+      @include vp-600 {
+        display: none;
+      }
+    }
   }
 
   &__link {
     position: relative;
     display: flex;
+    gap: 1.4rem;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
 
     &:hover #{$root}__icon,
     &:focus-visible #{$root}__icon {
       transform: scale(1.4);
-    }
-
-    &:hover #{$root}__tooltip,
-    &:focus-visible #{$root}__tooltip {
-      opacity: 1;
-      visibility: visible;
-      transform: scale(1);
     }
   }
 
@@ -70,23 +115,13 @@
     color: $color-white;
     width: 1.4rem;
     height: 1.4rem;
-    transform: scale(1);
     transition: transform 0.5s ease-in-out;
   }
 
   &__tooltip {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    right: 4.7rem;
-    color: $color-socials-tooltip;
     text-transform: capitalize;
     font-size: 1.3rem;
     line-height: 3.6rem;
-    transform: scale(0);
-    transform-origin: 100% 50%;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
-      visibility 0.5s ease-in-out;
+    color: $color-main-text;
   }
 }

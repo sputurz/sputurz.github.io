@@ -10,8 +10,8 @@ export function Header() {
       <header className={styles.header}>
         <Container>
           <div className={styles.header__wrap}>
-            <Logo></Logo>
-            <Nav></Nav>
+            <Logo className={styles.header__logo} />
+            <Nav />
           </div>
         </Container>
       </header>
