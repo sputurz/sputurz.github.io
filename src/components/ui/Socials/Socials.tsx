@@ -8,7 +8,6 @@ interface IProps {
 }
 
 export function Socials({ className, modifier }: IProps) {
-  console.log('modifier:', modifier);
   return (
     <>
       <ul
@@ -19,7 +18,7 @@ export function Socials({ className, modifier }: IProps) {
         }`}
       >
         {siteConfig.socialsLinks.map((socialsLink) => (
-          <li key={socialsLink.name}>
+          <li className={styles.socials__item} key={socialsLink.name}>
             <a
               target="_blank"
               className={styles.socials__link}

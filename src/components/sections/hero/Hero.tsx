@@ -1,6 +1,5 @@
 import styles from './Hero.module.scss';
 import { useEffect, useRef } from 'react';
-import './SimpleParallaxHero.css';
 import { Socials } from '../../ui/Socials';
 
 export function Hero() {

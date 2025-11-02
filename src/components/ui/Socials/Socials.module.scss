@@ -37,7 +37,7 @@
       content: '';
       height: 17.4rem;
       width: 1px;
-      background-color: $color-socials-bar;
+      background-color: $color-socials-line;
       position: absolute;
       bottom: -18rem;
       right: 50%;
@@ -76,6 +76,26 @@
     @include vp-600 {
       padding: 4.6rem 0 3rem;
       gap: 2.7rem;
+    }
+
+    #{$root}__item {
+      display: flex;
+      line-height: 3.9rem;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: '|';
+        color: $color-socials-bar;
+        color: red;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -1.9rem;
+
+        @include vp-600 {
+          display: none;
+        }
+      }
     }
 
     #{$root}__link:hover #{$root}__tooltip,

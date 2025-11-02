@@ -7,6 +7,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <p>dsd</p>
       <Footer />
     </>
   );
