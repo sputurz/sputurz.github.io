@@ -23,7 +23,7 @@ export function Socials({ className, modifier }: IProps) {
               target="_blank"
               className={styles.socials__link}
               href={socialsLink.url}
-              title={socialsLink.name}
+              aria-label={socialsLink.name}
             >
               <Icon
                 name={socialsLink.iconName}
