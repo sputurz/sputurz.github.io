@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <Hero />
-      <p>dsd</p>
+      <section id="section-about"></section>
       <Footer />
     </>
   );

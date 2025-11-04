@@ -1,7 +1,7 @@
 export const siteConfig = {
   navLinks: [
     { name: 'home', url: '#' },
-    { name: 'about', url: '#' },
+    { name: 'about', url: '#section-about' },
     { name: 'works', url: '#' },
     { name: 'blog', url: '#' },
     { name: 'contact', url: '#' },

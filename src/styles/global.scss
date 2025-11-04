@@ -17,15 +17,15 @@ html {
 
 html {
   font-size: 10px;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
-  // background-color: $bg-color-primary-body;
+  color: $color-primary-text;
+  background-color: $bg-color-primary-body;
 }
 
 main {
