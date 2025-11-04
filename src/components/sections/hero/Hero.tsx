@@ -1,6 +1,7 @@
 import styles from './Hero.module.scss';
 import { useEffect, useRef } from 'react';
 import { Socials } from '../../ui/Socials';
+import { siteConfig } from '../../../config/site.config';
 
 export function Hero() {
   const bgRef = useRef<HTMLDivElement>(null);
@@ -19,7 +20,7 @@ export function Hero() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section className={styles.hero} id={siteConfig.navLinks.hero.name}>
         <div ref={bgRef} className={styles.hero__bg}></div>
         <div className={styles.hero__overlay}></div>
         <div className={styles.hero__wrap}>
@@ -41,7 +42,7 @@ export function Hero() {
             </a>
             <a
               className={styles.hero__link}
-              href="#"
+              href={siteConfig.navLinks.about.url}
               aria-label="More About Me"
             >
               More About Me
@@ -50,7 +51,7 @@ export function Hero() {
           <span className={styles.hero__greeting}>Hello There</span>
           <a
             className={styles['hero__scrool-link']}
-            href="#"
+            href={siteConfig.navLinks.about.url}
             aria-label="Scroll Down"
           >
             Scroll Down

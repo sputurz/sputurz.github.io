@@ -17,7 +17,7 @@ export function Nav() {
           `}
       >
         <ul className={styles.nav__list}>
-          {siteConfig.navLinks.map((navLink) => (
+          {Object.values(siteConfig.navLinks).map((navLink) => (
             <li className={styles['nav__list-item']} key={navLink.name}>
               <a
                 className={styles.nav__link}

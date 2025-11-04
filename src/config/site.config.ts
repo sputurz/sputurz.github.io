@@ -1,11 +1,11 @@
 export const siteConfig = {
-  navLinks: [
-    { name: 'home', url: '#' },
-    { name: 'about', url: '#section-about' },
-    { name: 'works', url: '#' },
-    { name: 'blog', url: '#' },
-    { name: 'contact', url: '#' },
-  ],
+  navLinks: {
+    hero: { name: 'hero', url: '#' },
+    about: { name: 'about', url: '#about' },
+    works: { name: 'works', url: '#' },
+    blog: { name: 'blog', url: '#' },
+    contact: { name: 'contact', url: '#' },
+  },
   socialsLinks: [
     {
       name: 'telegram',
