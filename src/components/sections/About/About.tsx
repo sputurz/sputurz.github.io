@@ -1,4 +1,5 @@
-import { siteConfig } from '../../../config/site.config';
+import { siteConfig, softSkillsGrades } from '../../../config/site.config';
+import { Graph } from '../../ui/Graph';
 import styles from './About.module.scss';
 
 export function About() {
@@ -6,6 +7,18 @@ export function About() {
     <>
       <section className={styles.about} id={siteConfig.navLinks.about.name}>
         <h2 className={styles.about__title}>More About Me</h2>
+        <h3 className={styles['about__sub-title']}>I've Got Some skills.</h3>
+        <ul className={styles['about__skills-list']}>
+          {siteConfig.softSkills.frontend.map((softSkill) => (
+            <li key={softSkill.name}>
+              <Graph
+                title={softSkill.name}
+                tooltip={softSkillsGrades[softSkill.level].level}
+                value={softSkill.level}
+              ></Graph>
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );

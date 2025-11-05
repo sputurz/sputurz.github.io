@@ -97,6 +97,12 @@ export const siteConfig = {
   },
 } as const;
 
-siteConfig.softSkills.frontend.map((skill) => {
-  console.log(skill.name);
-});
+// siteConfig.softSkills.frontend.map((skill) => {
+//   console.log(skill.name);
+// });
+
+// const a = softSkillsGrades[siteConfig.softSkills.frontend[0].level].level;
+
+// console.log(a);
+
+// console.log(typeof a);
