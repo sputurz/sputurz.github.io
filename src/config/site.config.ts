@@ -9,10 +9,6 @@ export const softSkillsGrades = [
   { level: 'lead', index: 7 },
 ] as const;
 
-// softSkillsGrades.forEach((element) => {
-//   console.log(element.level);
-// });
-
 export const siteConfig = {
   navLinks: {
     hero: { name: 'hero', url: '#hero' },
@@ -96,13 +92,3 @@ export const siteConfig = {
     ],
   },
 } as const;
-
-// siteConfig.softSkills.frontend.map((skill) => {
-//   console.log(skill.name);
-// });
-
-// const a = softSkillsGrades[siteConfig.softSkills.frontend[0].level].level;
-
-// console.log(a);
-
-// console.log(typeof a);

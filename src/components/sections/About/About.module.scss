@@ -36,9 +36,13 @@
     font-size: 2.4rem;
     line-height: 1.25;
     font-family: $ff-montserrat-medium;
+    margin: 0;
   }
 
   &__skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin: 0;
     padding: 0;
     list-style-type: none;
