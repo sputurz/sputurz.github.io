@@ -34,6 +34,32 @@ export function About() {
             ></Graph>
           )}
         />
+
+        <h3 className={styles['about__sub-title']}>Hobby:</h3>
+
+        <ShowMore
+          array={siteConfig.softSkills.hobby}
+          renderItem={(skill) => (
+            <Graph
+              title={skill.name}
+              tooltip={softSkillsGrades[skill.level].level}
+              value={skill.level}
+            ></Graph>
+          )}
+        />
+
+        <h3 className={styles['about__sub-title']}>Other:</h3>
+
+        <ShowMore
+          array={siteConfig.softSkills.other}
+          renderItem={(skill) => (
+            <Graph
+              title={skill.name}
+              tooltip={softSkillsGrades[skill.level].level}
+              value={skill.level}
+            ></Graph>
+          )}
+        />
       </section>
     </>
   );

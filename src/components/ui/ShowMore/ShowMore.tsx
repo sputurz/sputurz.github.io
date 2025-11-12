@@ -44,12 +44,15 @@ export function ShowMore<T>({
               aria-label={'Collapse'}
               title={'Collapse'}
               onClick={onSlice}
+              type="button"
             >
               {'↑'}
             </button>
           )}
           <button
-            className={styles['show-more__btn']}
+            className={`${styles['show-more__btn']} ${
+              !isSliced ? styles['show-more__btn--trans'] : ''
+            }`}
             aria-label={isSliced ? 'Show more' : 'Collapse'}
             onClick={onSlice}
             type="button"
@@ -75,3 +78,8 @@ export function ShowMore<T>({
     </div>
   );
 }
+
+<div>
+  <button></button>
+  <ul></ul>
+</div>;
