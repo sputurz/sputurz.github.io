@@ -14,6 +14,7 @@ export function ShowMore<T>({
 }: IProps<T>) {
   const [isSliced, setSliced] = useState<boolean>(true);
   const [itemClassname, setItemClassname] = useState<string>('');
+  const [bntClassname, setBntClassname] = useState<string>('');
   const containerRef = useRef<HTMLDivElement>(null);
 
   const shownItems = isSliced ? array.slice(0, initialCount) : array;
@@ -22,41 +23,46 @@ export function ShowMore<T>({
   const onSlice = () => {
     if (!isSliced) {
       setItemClassname(styles['show-more__item--hide']);
+      setBntClassname(styles['show-more__btn--sticky--hide']);
       setTimeout(() => {
         setSliced(true);
       }, 400);
     } else {
       setItemClassname(styles['show-more__item--show']);
+      setBntClassname(styles['show-more__btn--sticky--show']);
       setSliced(false);
     }
-
-    // if (!isSliced && containerRef.current) {
-    //   setTimeout(() => {
-    //     containerRef.current?.scrollIntoView({
-    //       behavior: 'smooth',
-    //       block: 'start',
-    //     });
-    //   }, 100);
-    // }
   };
 
   return (
     <div ref={containerRef} className={styles['show-more']}>
       {hasMoreItems && (
-        <button
-          className={`${styles['show-more__btn']} ${
-            isSliced ? '' : styles['show-more__btn--sticky']
-          }`}
-          aria-label={isSliced ? 'Show more' : 'Collapse'}
-          title={isSliced ? 'Show more' : 'Collapse'}
-          onClick={onSlice}
-          type="button"
-        >
-          {/* {isSliced ? '↓' : '↑'} */}
-          {isSliced ? '...' : '↑'}
-        </button>
+        <>
+          {!isSliced && (
+            <button
+              className={`${styles['show-more__btn']} ${styles['show-more__btn--sticky']} ${bntClassname}`}
+              aria-label={'Collapse'}
+              title={'Collapse'}
+              onClick={onSlice}
+            >
+              {'↑'}
+            </button>
+          )}
+          <button
+            className={styles['show-more__btn']}
+            aria-label={isSliced ? 'Show more' : 'Collapse'}
+            onClick={onSlice}
+            type="button"
+          >
+            {isSliced ? 'Show more' : 'Collapse'}
+          </button>
+        </>
       )}
-      <ul className={styles['show-more__list']}>
+      <ul
+        className={`${styles['show-more__list']} ${
+          !isSliced ? styles['show-more__list--full'] : ''
+        }`}
+      >
         {shownItems.map((item, index) => (
           <li
             {...(index >= initialCount && { className: itemClassname })}
