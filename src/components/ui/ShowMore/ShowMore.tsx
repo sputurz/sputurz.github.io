@@ -13,31 +13,31 @@ export function ShowMore<T>({
   initialCount = 3,
 }: IProps<T>) {
   const [isSliced, setSliced] = useState<boolean>(true);
-  const [isMounted, setMounted] = useState<boolean>(false);
+  const [itemClassname, setItemClassname] = useState<string>('');
   const containerRef = useRef<HTMLDivElement>(null);
 
   const shownItems = isSliced ? array.slice(0, initialCount) : array;
   const hasMoreItems = array.length > initialCount;
 
   const onSlice = () => {
-    setMounted(!isMounted);
-
-    if (isSliced) {
-      setSliced(false);
-    } else {
+    if (!isSliced) {
+      setItemClassname(styles['show-more__item--hide']);
       setTimeout(() => {
         setSliced(true);
-      }, 300);
+      }, 400);
+    } else {
+      setItemClassname(styles['show-more__item--show']);
+      setSliced(false);
     }
 
-    if (!isSliced && containerRef.current) {
-      setTimeout(() => {
-        containerRef.current?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }, 100);
-    }
+    // if (!isSliced && containerRef.current) {
+    //   setTimeout(() => {
+    //     containerRef.current?.scrollIntoView({
+    //       behavior: 'smooth',
+    //       block: 'start',
+    //     });
+    //   }, 100);
+    // }
   };
 
   return (
@@ -52,19 +52,14 @@ export function ShowMore<T>({
           onClick={onSlice}
           type="button"
         >
-          {isSliced ? '↓' : '↑'}
+          {/* {isSliced ? '↓' : '↑'} */}
+          {isSliced ? '...' : '↑'}
         </button>
       )}
       <ul className={styles['show-more__list']}>
         {shownItems.map((item, index) => (
           <li
-            className={`${
-              index >= initialCount
-                ? isMounted
-                  ? styles['show-more__item--show']
-                  : styles['show-more__item--hide']
-                : ''
-            }`}
+            {...(index >= initialCount && { className: itemClassname })}
             key={index}
           >
             {renderItem(item, index)}

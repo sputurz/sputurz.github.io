@@ -1,7 +1,8 @@
 @use '../../../styles/variables' as *;
 
 .show-more {
-  scroll-margin-top: 8rem;
+  color: #000000;
+  scroll-margin-top: 2rem;
 
   &__list {
     display: flex;
@@ -14,31 +15,31 @@
 
   &__item {
     &--show {
-      animation: show $transition-300 forwards;
+      animation: show $transition-400 forwards;
     }
 
     &--hide {
-      animation: hide $transition-300 forwards;
+      animation: hide $transition-400 forwards;
     }
   }
 
   &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $ff-montserrat-semibold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    color: #151515;
-    background-color: #c5c5c5;
-    border: 0.3rem solid #c5c5c5;
-    justify-self: right;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // font-family: $ff-montserrat-semibold;
+    // font-size: 1.2rem;
+    // text-transform: uppercase;
+    // letter-spacing: 0.3rem;
+    // padding: 0;
+    // width: 50px;
+    // height: 50px;
+    // border-radius: 50%;
+    // text-align: center;
+    // color: #151515;
+    // background-color: #c5c5c5;
+    // border: 0.3rem solid #c5c5c5;
+    // justify-self: right;
 
     &:hover,
     &:focus-visible {
@@ -48,8 +49,8 @@
     }
 
     &--sticky {
-      position: sticky;
-      top: 10px;
+      // position: sticky;
+      // top: 10px;
       z-index: 1;
     }
   }
