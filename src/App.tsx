@@ -40,8 +40,8 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Hero />
+      {/* <Header /> */}
+      {/* <Hero /> */}
       <About />
       <Footer />
     </>

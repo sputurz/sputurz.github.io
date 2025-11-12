@@ -46,8 +46,8 @@ export const siteConfig = {
   ],
   softSkills: {
     frontend: [
-      { name: 'CSS3', level: 4, iconName: 'CssIcon' },
-      { name: 'HTML5', level: 4, iconName: 'HtmlIcon' },
+      { name: 'CSS3', level: 0, iconName: 'CssIcon' },
+      { name: 'HTML5', level: 7, iconName: 'HtmlIcon' },
       { name: 'SCSS', level: 3, iconName: 'ScssIcon' },
       { name: 'Figma', level: 3, iconName: 'FigmaIcon' },
       { name: 'PhotoShop', level: 4, iconName: 'PsIcon' },
@@ -59,7 +59,7 @@ export const siteConfig = {
       { name: 'React 18+', level: 3, iconName: 'ReactIcon' },
       { name: 'Styled-components', level: 3, iconName: 'StyledCompIcon' },
       { name: 'Tanstack React-Query', level: 3, iconName: 'ReactQueryIcon' },
-      { name: 'React Hook F orms', level: 3, iconName: 'HookformIcon' },
+      { name: 'React Hook Forms', level: 3, iconName: 'HookformIcon' },
       { name: 'Zod', level: 3, iconName: 'ZodIcon' },
       { name: 'RestApi', level: 3, iconName: 'RestApiIcon' },
       { name: 'Redux/Redux Toolkit ', level: 3, iconName: 'ReduxIcon' },

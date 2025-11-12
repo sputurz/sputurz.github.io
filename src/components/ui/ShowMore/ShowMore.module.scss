@@ -1,0 +1,78 @@
+@use '../../../styles/variables' as *;
+
+.show-more {
+  scroll-margin-top: 8rem;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    list-style-type: none;
+    margin: 0 0 2.5rem;
+  }
+
+  &__item {
+    &--show {
+      animation: show $transition-300 forwards;
+    }
+
+    &--hide {
+      animation: hide $transition-300 forwards;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $ff-montserrat-semibold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: #151515;
+    background-color: #c5c5c5;
+    border: 0.3rem solid #c5c5c5;
+    justify-self: right;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #b8b8b8;
+      border-color: #b8b8b8;
+      color: #000000;
+    }
+
+    &--sticky {
+      position: sticky;
+      top: 10px;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 0.9;
+  }
+}
