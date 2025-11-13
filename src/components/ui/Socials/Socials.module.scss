@@ -37,7 +37,7 @@
       content: '';
       height: 17.4rem;
       width: 1px;
-      background-color: $color-socials-line;
+      background-color: $bgc-socials-line;
       position: absolute;
       bottom: -18rem;
       right: 50%;
@@ -150,7 +150,7 @@
   }
 
   &__icon {
-    color: $color-primary-text;
+    color: $color-primary;
     width: 1.4rem;
     height: 1.4rem;
     transition: transform 0.5s ease-in-out;
@@ -160,6 +160,6 @@
     text-transform: capitalize;
     font-size: 1.3rem;
     line-height: 3.6rem;
-    color: $color-primary-text;
+    color: $color-primary;
   }
 }

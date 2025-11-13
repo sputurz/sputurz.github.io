@@ -22,14 +22,14 @@ export function ShowMore<T>({
 
   const onSlice = () => {
     if (!isSliced) {
-      setItemClassname(styles['show-more__item--hide']);
-      setBntClassname(styles['show-more__btn--sticky--hide']);
+      setItemClassname(styles['show-more__item--hide']!);
+      setBntClassname(styles['show-more__btn--sticky--hide']!);
       setTimeout(() => {
         setSliced(true);
       }, 400);
     } else {
-      setItemClassname(styles['show-more__item--show']);
-      setBntClassname(styles['show-more__btn--sticky--show']);
+      setItemClassname(styles['show-more__item--show']!);
+      setBntClassname(styles['show-more__btn--sticky--show']!);
       setSliced(false);
     }
   };
@@ -50,9 +50,7 @@ export function ShowMore<T>({
             </button>
           )}
           <button
-            className={`${styles['show-more__btn']} ${
-              !isSliced ? styles['show-more__btn--trans'] : ''
-            }`}
+            className={styles['show-more__btn']}
             aria-label={isSliced ? 'Show more' : 'Collapse'}
             onClick={onSlice}
             type="button"
@@ -61,11 +59,7 @@ export function ShowMore<T>({
           </button>
         </>
       )}
-      <ul
-        className={`${styles['show-more__list']} ${
-          !isSliced ? styles['show-more__list--full'] : ''
-        }`}
-      >
+      <ul className={styles['show-more__list']}>
         {shownItems.map((item, index) => (
           <li
             {...(index >= initialCount && { className: itemClassname })}

@@ -30,7 +30,7 @@
   &__credits {
     padding-top: 7.2rem;
     font-size: 1.4rem;
-    color: $color-third-text;
+    color: $color-third;
     font-family: $ff-montserrat-regular;
 
     @include vp-600 {
@@ -38,7 +38,7 @@
     }
 
     &-link {
-      color: $color-link-text;
+      color: $color-link;
       transition: filter 0.5s ease-in-out;
 
       &:focus-visible,

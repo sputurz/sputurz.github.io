@@ -85,7 +85,7 @@
     display: block;
     width: 900px;
     margin: 0;
-    color: $color-primary-text;
+    color: $color-primary;
     font-family: $ff-librebaskerville-bold;
     font-size: 6rem;
     line-height: 1.35;
@@ -206,12 +206,12 @@
     font-size: 1.2rem;
     font-family: $ff-montserrat-semibold;
     line-height: 4.8rem;
-    color: $color-primary-btn;
+    color: $color-btn-primary;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
     cursor: pointer;
 
-    border: 0.3rem solid $brdr-color-primary-btn;
+    border: 0.3rem solid $brc-btn-primary;
     transition: all 0.5s ease-in-out;
 
     outline: none;
@@ -223,8 +223,8 @@
 
     &:hover,
     &:focus-visible {
-      background-color: $bg-color-primary-btn;
-      color: $color-secondary-btn;
+      background-color: $bgc-btn-primary;
+      color: $color-btn-secondary;
     }
   }
 
@@ -232,7 +232,7 @@
     position: absolute;
     left: 0.6rem;
     bottom: -15.4rem;
-    color: $color-primary-text;
+    color: $color-primary;
     font-family: $ff-montserrat-semibold;
     font-size: 1.1rem;
     text-transform: uppercase;
