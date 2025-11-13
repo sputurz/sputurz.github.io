@@ -15,14 +15,14 @@
     letter-spacing: 0.2rem;
     font-size: 1.4rem;
     line-height: 2.4rem;
-    color: $color-graph-title-text;
+    color: $color-graph-title;
   }
 
   &__bar-bg {
     display: flex;
     position: relative;
     height: 0.6rem;
-    background: $bg-color-graph-bar;
+    background: $bgc-graph-bar;
   }
 
   &__value {
@@ -32,7 +32,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $bg-color-graph-value;
+    background-color: $bgc-graph-value;
     background-image: linear-gradient(to right, #191a3f, #2d462c);
   }
 
@@ -43,10 +43,10 @@
     right: 0;
     text-transform: uppercase;
     font-family: $ff-montserrat-regular;
-    color: $color-graph-tooltip-text;
+    color: $color-graph-tooltip;
     font-size: 1.1rem;
     line-height: 1;
-    background-color: $bg-color-graph-tooltip;
+    background-color: $bgc-graph-tooltip;
     border-radius: 3px;
     padding: 0.6rem;
     transform: translateX(50%);
