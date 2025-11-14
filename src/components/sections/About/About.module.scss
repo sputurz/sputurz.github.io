@@ -47,4 +47,10 @@
     padding: 0;
     list-style-type: none;
   }
+
+  &__svg {
+    color: $color-secondary;
+    width: 14px;
+    height: 14px;
+  }
 }

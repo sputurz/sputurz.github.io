@@ -1,7 +1,8 @@
+import type { ReactNode } from 'react';
 import styles from './Graph.module.scss';
 
 interface IProps {
-  title: string;
+  title: string | ReactNode;
   tooltip: string;
   value: number;
   minValue?: number;

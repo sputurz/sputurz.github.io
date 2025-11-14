@@ -1,4 +1,6 @@
 import * as Icons from './icons';
+import styles from './Icon.module.scss';
+import { Suspense } from 'react';
 
 interface IProps {
   name: keyof typeof Icons;
@@ -7,5 +9,12 @@ interface IProps {
 
 export function Icon({ name, className }: IProps) {
   const LazyIcon = Icons[name];
-  return <LazyIcon className={className} viewBox="0 0 24 24" />;
+
+  return (
+    <span className={`${styles.icon__wrap} ${className}`}>
+      <Suspense fallback={<span>...</span>}>
+        <LazyIcon />
+      </Suspense>
+    </span>
+  );
 }

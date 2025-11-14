@@ -9,6 +9,8 @@
 
   &__title {
     display: flex;
+    align-items: center;
+    gap: 1rem;
     margin: 0;
     font-family: $ff-montserrat-extrabold;
     text-transform: uppercase;
