@@ -1,1 +1,0 @@
-import{r as e}from"./index-DHh25MGc.js";const a=t=>e.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",fill:"currentColor",viewBox:"0 0 20 20",...t},e.createElement("path",{fillRule:"evenodd",d:"M10 12v8A10 10 0 0 1 8.2.2L10 2h5a5 5 0 0 1 5 5v9a4 4 0 0 1-4 4v-2a2 2 0 1 0 0-4h-4l-2-2zm5.5-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"}));export{a as default};
