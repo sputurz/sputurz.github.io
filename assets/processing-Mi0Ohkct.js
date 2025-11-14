@@ -1,1 +1,0 @@
-import{r as t}from"./index-WgLq6Ii5.js";const o=e=>t.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:800,height:800,fill:"none",...e},t.createElement("path",{stroke:"currentColor",strokeWidth:150,d:"M400 500c300 0 300-400 0-400M400 200 100 600M100 300l100 200"}));export{o as default};
