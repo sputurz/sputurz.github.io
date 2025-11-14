@@ -2,7 +2,7 @@ import { useRef, useState, type ReactNode } from 'react';
 import styles from './ShowMore.module.scss';
 
 interface IProps<T> {
-  array: readonly T[] | T[];
+  array: T[];
   renderItem: (item: T, index: number) => ReactNode;
   initialCount?: number;
 }
