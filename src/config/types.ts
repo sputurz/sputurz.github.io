@@ -26,4 +26,5 @@ export interface ISiteConfig {
   navLinks: Record<string, INavLink>;
   socialsLinks: ISocialsLink[];
   softSkills: ISoftSkill[];
+  formEndpoint: string;
 }

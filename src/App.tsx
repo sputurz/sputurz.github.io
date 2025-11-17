@@ -3,6 +3,7 @@ import { Footer } from './components/layout/Footer';
 // import { Header } from './components/layout/Header';
 // import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
+import { ContactForm } from './components/ui/ContactForm';
 
 function App() {
   // const [activeSection, setActiveSection] = useState('hero');
@@ -42,8 +43,9 @@ function App() {
     <>
       {/* <Header /> */}
       {/* <Hero /> */}
-      <About />
-      <Footer />
+      {/* <About /> */}
+      {/* <Footer /> */}
+      <ContactForm />
     </>
   );
 }

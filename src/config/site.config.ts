@@ -105,4 +105,5 @@ export const siteConfig: ISiteConfig = {
       ],
     },
   ],
+  formEndpoint: 'https://formspree.io/f/mqawokpy',
 };
