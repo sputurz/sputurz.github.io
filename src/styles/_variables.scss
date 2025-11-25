@@ -3,8 +3,9 @@
 $color-primary: #ffffff;
 $color-secondary: #0d0a0b;
 $color-third: rgba(255, 255, 255, 0.2);
-$color-link: #862121;
+$color-accent: #862121;
 $bgc-body: #0a0809;
+$color-head-line: rgba(0, 0, 0, 0.1);
 
 // input
 $color-input: rgba(255, 255, 255, 0.75);
@@ -47,7 +48,6 @@ $bgc-burger: #000000;
 
 //hero
 $color-hero-scrool: #922424;
-$color-hero-greeting: #862121;
 $bgi-hero-img: url('/images/hero-bg.jpg');
 $bgi-hero-overlay: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8));
 

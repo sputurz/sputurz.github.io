@@ -43,9 +43,9 @@ function App() {
     <>
       {/* <Header /> */}
       {/* <Hero /> */}
-      {/* <About /> */}
-      {/* <Footer /> */}
-      <ContactForm />
+      <About />
+      <Footer />
+      {/* <ContactForm /> */}
     </>
   );
 }
