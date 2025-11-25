@@ -1,4 +1,5 @@
 import { siteConfig } from '../../../config/site.config';
+import { FormField } from '../FormField';
 import styles from './ContactForm.module.scss';
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 
@@ -8,7 +9,7 @@ interface FormData {
   message: string;
 }
 
-type FormStatus = 'idle' | 'sending' | 'success' | 'error';
+type FormStatus = 'idle' | 'pending' | 'success' | 'error';
 
 export function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -28,7 +29,7 @@ export function ContactForm() {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('sending');
+    setStatus('pending');
     setError('');
 
     try {
@@ -55,40 +56,48 @@ export function ContactForm() {
   return (
     <>
       <form className={styles['contact-form']} onSubmit={onSubmit}>
-        <label htmlFor="name">Имя:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={onChange}
-          required
-          disabled={status === 'sending'}
-        />
+        <FormField htmlFor="name" errorMessage="This field is required.">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={onChange}
+            required
+            disabled={status === 'pending'}
+            placeholder="Name"
+            autoComplete="given-name"
+          />
+        </FormField>
 
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={onChange}
-          required
-          disabled={status === 'sending'}
-        />
+        <FormField htmlFor="email">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={onChange}
+            required
+            disabled={status === 'pending'}
+            placeholder="Email"
+            autoComplete="email"
+          />
+        </FormField>
 
-        <label htmlFor="message">Сообщение:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={onChange}
-          required
-          disabled={status === 'sending'}
-        />
+        <FormField htmlFor="message">
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={onChange}
+            required
+            disabled={status === 'pending'}
+            placeholder="message"
+          />
+        </FormField>
 
-        <button type="submit" disabled={status === 'sending'}>
-          {status === 'sending' ? 'Отправка...' : 'Отправить'}
+        <button type="submit" disabled={status === 'pending'}>
+          {status === 'pending' ? 'Отправка...' : 'Отправить'}
         </button>
 
         {status === 'success' && <div>Сообщение успешно отправлено!</div>}

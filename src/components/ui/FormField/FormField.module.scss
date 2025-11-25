@@ -1,0 +1,78 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0.9rem;
+
+  & input,
+  & textarea {
+    padding: 1.5rem 0;
+    background-color: transparent;
+    font-family: $ff-montserrat-regular;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    border: none;
+    border-bottom: 1px solid $brc-input;
+    color: $color-input;
+    transition: border-color $transition-300;
+
+    //  WebKit  (Chrome, Safari, Edge)
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+      -webkit-text-fill-color: $color-input-focus !important;
+      border-color: $brc-input-focus;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    // Firefox
+    &:-moz-autofill,
+    &:-moz-autofill:hover,
+    &:-moz-autofill:focus,
+    &:autofill,
+    &:autofill:hover,
+    &:autofill:focus {
+      background-color: transparent !important;
+      color: $color-input-focus !important;
+      border-color: $brc-input-focus;
+    }
+  }
+
+  &:focus-within > input,
+  &:focus-within > textarea {
+    outline: none;
+    border-color: $brc-input-focus;
+    color: $color-input-focus;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -1.3rem;
+    right: 0.6rem;
+    display: flex;
+    padding: 0 2rem;
+    color: $color-input-error;
+    background-color: $bgc-input-error;
+    font-family: $ff-montserrat-semibold;
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      margin-top: -6px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid $bgc-input-error;
+    }
+  }
+}
