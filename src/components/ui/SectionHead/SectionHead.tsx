@@ -21,7 +21,7 @@ export function SectionHead({
     <div
       className={`${styles['section-head']} ${
         isHeadLine && styles['section-head--bar']
-      }
+      } ${isDark && styles['section-head--dark']}
       `}
     >
       <span className={styles['section-head__name']}>{name}</span>

@@ -1,0 +1,32 @@
+import { siteConfig } from '../../../config/site.config';
+import { ContactForm } from '../../ui/ContactForm';
+import { SectionHead } from '../../ui/SectionHead';
+import styles from './Contact.module.scss';
+
+export function Contact() {
+  return (
+    <>
+      <section
+        className={styles.contact}
+        id={siteConfig.navLinks.contact.name}
+        aria-labelledby={`${siteConfig.navLinks.contact.name}-title`}
+      >
+        <SectionHead
+          isHeadLine={false}
+          isDark
+          id={`${siteConfig.navLinks.contact.name}-title`}
+          name={siteConfig.navLinks.contact.name}
+          title="Say Hello."
+          text="Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia."
+        />
+        <div className={styles.contact__wrap}>
+          <ContactForm />
+          <div>
+            udsadsadasdsadadad asdasdasdasd asdddadadsadsa sadsdsadsadsaads
+            sadadsadsa
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

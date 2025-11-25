@@ -10,7 +10,7 @@
   color: $color-secondary;
   max-width: 760px;
   margin: 0 auto;
-  // $root: &;
+  $root: &;
 
   &--bar {
     margin-bottom: 7.5rem;
@@ -24,11 +24,16 @@
       height: 1px;
       width: 240px;
       background-color: $color-head-line;
-      background-color: red;
     }
   }
 
   &--dark {
+    padding-top: 13.2rem;
+    color: $color-primary;
+
+    #{$root}__text {
+      color: $color-four;
+    }
   }
 
   &__name {

@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 12rem;
+  background-color: $bgc-contact;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: $bgi-contact-img;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    filter: brightness(0.3);
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 540px auto;
+    margin: 0 auto;
+    max-width: 760px;
+    gap: 60px;
+  }
+}

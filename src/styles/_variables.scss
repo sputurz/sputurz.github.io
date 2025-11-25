@@ -3,6 +3,7 @@
 $color-primary: #ffffff;
 $color-secondary: #0d0a0b;
 $color-third: rgba(255, 255, 255, 0.2);
+$color-four: rgba(255, 255, 255, 0.5);
 $color-accent: #862121;
 $bgc-body: #0a0809;
 $color-head-line: rgba(0, 0, 0, 0.1);
@@ -53,6 +54,10 @@ $bgi-hero-overlay: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8));
 
 // about
 $bgc-about: #ffffff;
+
+// contact
+$bgc-contact: #151515;
+$bgi-contact-img: url('/images/contact-bg.jpg');
 
 // Typography
 // libre baskerville

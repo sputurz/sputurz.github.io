@@ -14,7 +14,6 @@ export function About() {
         aria-labelledby={`${siteConfig.navLinks.about.name}-title`}
       >
         <SectionHead
-          isHeadLine={false}
           id={`${siteConfig.navLinks.about.name}-title`}
           name={siteConfig.navLinks.about.name}
           title="More About Me"

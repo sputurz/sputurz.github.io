@@ -3,6 +3,7 @@ import { Footer } from './components/layout/Footer';
 // import { Header } from './components/layout/Header';
 // import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
+import { Contact } from './components/sections/Contact';
 import { ContactForm } from './components/ui/ContactForm';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
       {/* <Header /> */}
       {/* <Hero /> */}
       <About />
+      <Contact />
       <Footer />
       {/* <ContactForm /> */}
     </>
