@@ -4,13 +4,11 @@
 .hero {
   min-height: 786px;
   height: 100vh;
-  // height: 100dvh;
   position: relative;
   overflow: hidden;
 
   @include vp-500 {
     min-height: 654px;
-    // height: 100dvh;
   }
 
   &__bg {
@@ -140,7 +138,7 @@
     left: 4.9rem;
     top: -2.6rem;
     font-family: $ff-montserrat-bold;
-    color: $color-hero-greeting;
+    color: $color-accent;
     font-size: 1.8rem;
     text-transform: uppercase;
     line-height: 1.25;
@@ -166,7 +164,7 @@
       content: '';
       width: 6rem;
       height: 2px;
-      background-color: $color-hero-greeting;
+      background-color: $color-accent;
 
       @include vp-800 {
         width: 4rem;

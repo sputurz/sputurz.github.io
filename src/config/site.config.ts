@@ -15,9 +15,9 @@ export const siteConfig: ISiteConfig = {
   navLinks: {
     hero: { name: 'hero', url: '#hero' },
     about: { name: 'about', url: '#about' },
-    works: { name: 'works', url: '#' },
-    blog: { name: 'blog', url: '#' },
-    contact: { name: 'contact', url: '#' },
+    // works: { name: 'works', url: '#works' },
+    // blog: { name: 'blog', url: '#blog' },
+    contact: { name: 'contact', url: '#contact' },
   },
   socialsLinks: [
     {

@@ -5,12 +5,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 15rem;
   text-align: center;
   color: $color-secondary;
   max-width: 800px;
   width: 94%;
-  margin: 0 auto;
+  margin: 15rem auto 0;
   $root: &;
 
   @include vp-800 {
@@ -38,7 +37,7 @@
   }
 
   &--dark {
-    padding-top: 13.2rem;
+    margin-top: 13.2rem;
     color: $color-primary;
 
     #{$root}__text {
