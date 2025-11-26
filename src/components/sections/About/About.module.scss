@@ -10,12 +10,12 @@
   font-family: $ff-librebaskerville-bold;
 
   &__wrap {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1160px;
     width: 94%;
     margin: 0 auto;
-    gap: 3rem;
 
     @include vp-800 {
       max-width: 600px;
@@ -24,18 +24,8 @@
 
     @include vp-600 {
       padding: 0 25px;
-      width: auto;
-      margin: 0;
+      width: 100%;
     }
-  }
-
-  &__skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
   }
 
   &__sub-title {
@@ -43,6 +33,30 @@
     line-height: 1.25;
     font-family: $ff-montserrat-medium;
     margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    line-height: 1.875;
+    color: #5f5f5f;
+    font-family: $ff-librebaskerville-regular;
+  }
+
+  &__skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__skills-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   &__svg {
