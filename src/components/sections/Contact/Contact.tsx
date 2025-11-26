@@ -21,9 +21,24 @@ export function Contact() {
         />
         <div className={styles.contact__wrap}>
           <ContactForm />
-          <div>
-            udsadsadasdsadadad asdasdasdasd asdddadadsadsa sadsdsadsadsaads
-            sadadsadsa
+          <div className={styles.contact__info}>
+            <div className={styles['contact__info-item']}>
+              <span className={styles['contact__info-title']}>Email</span>
+              <span className={styles['contact__info-text']}>
+                <a
+                  href="mailto:sputurza@gmail.com"
+                  aria-label="developer Email"
+                >
+                  sputurza@gmail.com
+                </a>
+              </span>
+            </div>
+            <div className={styles['contact__info-item']}>
+              <span className={styles['contact__info-title']}>Address</span>
+              <span className={styles['contact__info-text']}>
+                Belarus, Minsk
+              </span>
+            </div>
           </div>
         </div>
       </section>

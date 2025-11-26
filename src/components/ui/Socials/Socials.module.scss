@@ -86,7 +86,6 @@
       &:not(:last-child)::after {
         content: '|';
         color: $color-socials-bar;
-        color: red;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);

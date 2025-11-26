@@ -7,6 +7,7 @@
   position: relative;
   padding-bottom: 12rem;
   background-color: $bgc-contact;
+  z-index: 0;
 
   &::before {
     content: '';
@@ -16,13 +17,60 @@
     background-repeat: no-repeat;
     background-position: center, center;
     filter: brightness(0.3);
+    z-index: -1;
   }
 
   &__wrap {
     display: grid;
-    grid-template-columns: 540px auto;
+    grid-template-columns: calc(66% - 30px) auto;
     margin: 0 auto;
-    max-width: 760px;
+    width: 94%;
+    max-width: 860px;
     gap: 60px;
+
+    @include vp-800 {
+      width: 100%;
+      padding: 0 25px;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.2rem;
+    gap: 3rem;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &-title {
+      font-family: $ff-montserrat-bold;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.16rem;
+      color: $color-primary;
+    }
+
+    &-text {
+      font-family: $ff-librebaskerville-regular;
+      line-height: 1.875;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.5rem;
+
+      & > a {
+        color: inherit;
+        transition: filter $transition-300;
+
+        &:hover,
+        &:focus-visible {
+          filter: brightness(1.1);
+        }
+      }
+    }
   }
 }

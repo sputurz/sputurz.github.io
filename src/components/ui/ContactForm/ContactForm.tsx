@@ -56,7 +56,10 @@ export function ContactForm() {
   return (
     <>
       <form className={styles['contact-form']} onSubmit={onSubmit}>
-        <FormField htmlFor="name" errorMessage="This field is required.">
+        <FormField
+          htmlFor="name"
+          // errorMessage="This field is required."
+        >
           <input
             type="text"
             id="name"
@@ -96,8 +99,12 @@ export function ContactForm() {
           />
         </FormField>
 
-        <button type="submit" disabled={status === 'pending'}>
-          {status === 'pending' ? 'Отправка...' : 'Отправить'}
+        <button
+          className={styles['contact-form__btn']}
+          type="submit"
+          disabled={status === 'pending'}
+        >
+          {status === 'pending' ? 'Sending...' : 'Submit'}
         </button>
 
         {status === 'success' && <div>Сообщение успешно отправлено!</div>}
