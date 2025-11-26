@@ -17,34 +17,33 @@ export function About() {
           id={`${siteConfig.navLinks.about.name}-title`}
           name={siteConfig.navLinks.about.name}
           title="More About Me"
-          text="Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.
-
-"
+          text="Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia."
         />
-
-        {siteConfig.softSkills.map((skills) => (
-          <div key={skills.title} className={styles['about__skills-list']}>
-            <h3 className={styles['about__sub-title']}>{skills.title}:</h3>
-            <ShowMore
-              array={skills.list}
-              renderItem={(skill) => (
-                <Graph
-                  title={
-                    <>
-                      <Icon
-                        name={skill.iconName}
-                        className={styles.about__svg}
-                      ></Icon>
-                      <span>{skill.name}</span>
-                    </>
-                  }
-                  tooltip={softSkillsGrades[skill.level].level}
-                  value={skill.level}
-                ></Graph>
-              )}
-            />
-          </div>
-        ))}
+        <div className={styles.about__wrap}>
+          {siteConfig.softSkills.map((skills) => (
+            <div key={skills.title} className={styles['about__skills-list']}>
+              <h3 className={styles['about__sub-title']}>{skills.title}:</h3>
+              <ShowMore
+                array={skills.list}
+                renderItem={(skill) => (
+                  <Graph
+                    title={
+                      <>
+                        <Icon
+                          name={skill.iconName}
+                          className={styles.about__svg}
+                        ></Icon>
+                        <span>{skill.name}</span>
+                      </>
+                    }
+                    tooltip={softSkillsGrades[skill.level].level}
+                    value={skill.level}
+                  ></Graph>
+                )}
+              />
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

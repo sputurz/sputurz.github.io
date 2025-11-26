@@ -4,17 +4,29 @@
 .about {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 0 5rem 9rem;
+  padding: 0 0 9rem;
   background-color: $bgc-about;
   color: $color-secondary;
   font-family: $ff-librebaskerville-bold;
 
-  &__sub-title {
-    font-size: 2.4rem;
-    line-height: 1.25;
-    font-family: $ff-montserrat-medium;
-    margin: 0;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 94%;
+    margin: 0 auto;
+    gap: 3rem;
+
+    @include vp-800 {
+      max-width: 600px;
+      width: 90%;
+    }
+
+    @include vp-600 {
+      padding: 0 25px;
+      width: auto;
+      margin: 0;
+    }
   }
 
   &__skills-list {
@@ -24,6 +36,13 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+  }
+
+  &__sub-title {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-family: $ff-montserrat-medium;
+    margin: 0;
   }
 
   &__svg {
