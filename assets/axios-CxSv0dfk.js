@@ -1,0 +1,1 @@
+import{r as t}from"./index-CIYKsZWG.js";const o=e=>t.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",width:24,height:24,...e},t.createElement("path",{fill:"currentColor",d:"M11 2.9v19.4L9 24V7.9H5l6-5zM15 0v15.8h4l-6.2 5V1.6L15 0z"}));export{o as default};

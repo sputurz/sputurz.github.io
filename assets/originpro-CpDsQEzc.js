@@ -1,1 +1,0 @@
-import{r as e}from"./index-IvySCIYR.js";const o=t=>e.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",fill:"none",viewBox:"0 0 24 24",...t},e.createElement("g",{stroke:"currentColor",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:2},e.createElement("path",{d:"M4 5v14l1 1h14"}),e.createElement("path",{d:"m18 9-5 5-2-3-4 4"})));export{o as default};
