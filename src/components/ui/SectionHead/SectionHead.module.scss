@@ -43,6 +43,14 @@
     letter-spacing: 0.15rem;
     color: $color-accent;
     font-family: $ff-montserrat-semibold;
+
+    @include vp-800 {
+      font-size: 1.8rem;
+    }
+
+    @include vp-600 {
+      font-size: 1.7rem;
+    }
   }
 
   &__title {
@@ -72,5 +80,9 @@
     padding: 0;
     font-size: 2rem;
     line-height: 1.8;
+
+    @include vp-800 {
+      font-size: 1.8rem;
+    }
   }
 }

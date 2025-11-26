@@ -18,6 +18,7 @@ Also it available on Gitghub Pages https://sputurz.github.io.
 
 released:
 
+- optimized img and svg
 - added some effects to links/buttons
 - added some tags for SEO
 - full custom React hooks features without reference jQuery plugins

@@ -3,14 +3,14 @@ import styles from './FormField.module.scss';
 
 interface IProps {
   children: ReactNode;
-  isError?: boolean;
+  // isError?: boolean;
   errorMessage?: string;
   htmlFor?: string;
 }
 
 export const FormField: FC<IProps> = ({
   children,
-  isError,
+  // isError,
   errorMessage,
   htmlFor,
 }) => {
