@@ -20,6 +20,7 @@
     @include vp-800 {
       max-width: 600px;
       width: 90%;
+      grid-template-columns: 1fr;
     }
 
     @include vp-600 {
@@ -28,11 +29,21 @@
     }
   }
 
+  &__text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
   &__sub-title {
     font-size: 2.4rem;
     line-height: 1.25;
     font-family: $ff-montserrat-medium;
     margin: 0;
+
+    @include vp-800 {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -40,8 +51,21 @@
     padding: 0;
     font-size: 1.6rem;
     line-height: 1.875;
-    color: #5f5f5f;
+    color: $color-about;
     font-family: $ff-librebaskerville-regular;
+  }
+
+  &__text-head {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-family: $ff-montserrat-bold;
+    margin: 0;
+  }
+
+  &__skills-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   &__skills-list {

@@ -35,7 +35,12 @@ export function ShowMore<T>({
   };
 
   return (
-    <div ref={containerRef} className={styles['show-more']}>
+    <div
+      ref={containerRef}
+      className={`${styles['show-more']} ${
+        hasMoreItems && styles['show-more--has-more']
+      }`}
+    >
       {hasMoreItems && (
         <>
           {!isSliced && (

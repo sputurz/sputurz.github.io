@@ -2,7 +2,10 @@
 
 .show-more {
   position: relative;
-  padding-bottom: 8rem;
+
+  &--has-more {
+    padding-bottom: 8rem;
+  }
 
   &__list {
     display: flex;
